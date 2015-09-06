@@ -14,6 +14,9 @@ public class FlyPickup : MonoBehaviour {
 			// ...add the pickup particles...
 			Instantiate(pickupPrefab, transform.position, Quaternion.identity); // (gameObject, Vector3, Quaternion rotation) identity sets 0 rotation on the particles
 
+			// ...decrement the total number of flies...
+			FlySpawner.totalFlies--;
+
 			// Destroy the game object this script is attached to
 			Destroy (gameObject);
 
